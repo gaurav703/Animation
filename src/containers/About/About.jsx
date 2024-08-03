@@ -7,35 +7,24 @@ import { urlFor, client } from "../../client";
 import { useTheme } from "../../hooks/useTheme";
 const About = () => {
   const { mode } = useTheme();
-  // const abouts = [
-  //   {
-  //     title: "Web Development",
-  //     description: "I am a web developer",
-  //     imgUrl: images.about01,
-  //   },
-  //   {
-  //     title: "Frontend Development",
-  //     description: "I am a Frontend developer",
-  //     imgUrl: images.about02,
-  //   },
-  //   {
-  //     title: "Backend  Development",
-  //     description: "I am abackend developer",
-  //     imgUrl: images.about03,
-  //   },
-  //   {
-  //     title: "MERN Stack",
-  //     description: "I am a MERN Stack",
-  //     imgUrl: images.about04,
-  //   },
-  // ];
-  const [abouts, setAbouts] = useState([]);
-  useEffect(() => {
-    const query = '*[_type == "abouts"]';
-    client.fetch(query).then((data) => {
-      setAbouts(data);
-    });
-  }, []);
+  const abouts = [
+    {
+      title: "Web Development",
+      description: "I am a web developer",
+    },
+    {
+      title: "Frontend Development",
+      description: "I am a Frontend developer",
+    },
+    {
+      title: "Backend  Development",
+      description: "I am abackend developer",
+    },
+    {
+      title: "MERN Stack",
+      description: "I am a MERN Stack",
+    },
+  ];
 
   return (
     <>
@@ -50,14 +39,15 @@ const About = () => {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: "tween" }}
             className={`app__profile-item `}
-            key={about.title + index}
+            key={index}
           >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
+            <img src="/about-img.png" alt="about" />
             <h2 className={`bold-text ${mode}`} style={{ marginTop: "20px" }}>
-              {about.title}
+              MERN Stack developer
             </h2>
             <p className={`p-text ${mode}`} style={{ marginTop: "10px" }}>
-              {about.description}
+              I am a MERN Stack developer with the passion of creating beautiful
+              and functional web apps
             </p>
           </motion.div>
         ))}
