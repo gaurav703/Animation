@@ -14,12 +14,12 @@ const Skills = () => {
         {
           name: "Software Engineer Intern",
           company: "Aeons Technologies",
-          desc: "Worked on full-stack development projects including frontend and backend technologies like Next.js, React Native, Tailwind CSS, Node.js, Express.js, and MongoDB. Contributed to more than 5 projects and led the software team for 2 major projects.",
+          desc: "Worked on full-stack development projects, utilizing frontend technologies like Next.js, React Native, and Tailwind CSS, alongside backend technologies including Node.js, Express.js, and MongoDB. Contributed to over 5 diverse projects ranging from web applications to mobile apps, ensuring high performance and user experience. Took a leadership role in 2 major projects, managing the software team, coordinating tasks, and overseeing development to meet project milestones and deliverables. Engaged in code reviews, debugging, and implementing best practices for code quality and efficiency.",
         },
         // {
         //   name: "Mentor",
         //   company: "GirlScript Summer of Code",
-        //   desc: "Mentored students in open source contributions, helping them with project issues and guiding them through coding practices and best solutions.",
+        //   desc: "Mentored students in open source contributions, guiding them through project setup, development, and troubleshooting. Provided support on coding practices, best solutions, and project management. Assisted in reviewing pull requests, offering feedback on code quality, and helping students overcome technical challenges. Contributed to the growth of the open source community by sharing knowledge and encouraging best practices in software development.",
         // },
       ],
     },
@@ -29,60 +29,73 @@ const Skills = () => {
         {
           name: "Core Member",
           company: "RNXG",
-          desc: "Led and mentored more than 2 projects, guiding team members and ensuring timely delivery of software solutions.",
+          desc: "Led and mentored over 2 projects, including project planning, resource allocation, and delivery management. Provided guidance to team members, helping them navigate technical challenges and ensuring alignment with project goals. Facilitated effective communication within the team and between stakeholders, contributing to the successful execution of software solutions. Oversaw the implementation of best practices in software development and project management, leading to improved team productivity and project outcomes.",
         },
       ],
     },
   ];
+
   const [skills, setSkills] = useState([
     {
       name: "HTML",
       bgColor: "#f16529",
+      imgUrl: "/html.png",
     },
     {
       name: "CSS",
       bgColor: "#2965f1",
+      imgUrl: "/css.svg",
     },
     {
       name: "JavaScript",
       bgColor: "#f0db4f",
+      imgUrl: "/javascript.png",
     },
     {
       name: "React.js",
       bgColor: "#61dbfb",
+      imgUrl: "/Reactjs.png",
     },
     {
       name: "Node.js",
       bgColor: "#68a063",
+      imgUrl: "/nodejs.png",
     },
     {
       name: "Express.js",
       bgColor: "#000",
+      imgUrl: "/express.jpg",
     },
     {
       name: "MongoDB",
       bgColor: "#4db33d",
+      imgUrl: "/mongo.png",
     },
     {
       name: "Git",
       bgColor: "#f34f29",
+      imgUrl: "/git.png",
     },
     {
       name: "Tailwind CSS",
       bgColor: "#06b6d4",
+      imgUrl: "/tailwind.png",
     },
     {
       name: "Next.js",
       bgColor: "#000",
+      imgUrl: "/nextjs.png",
     },
     {
       name: "React Native",
       bgColor: "#61dbfb",
+      imgUrl: "/Reactjs.png",
     },
-    {
-      name: "Figma",
-      bgColor: "#f24e1e",
-    },
+    // {
+    //   name: "Figma",
+    //   bgColor: "#f24e1e",
+    //   imgUrl: "/Reactjs.png",
+    // },
   ]);
   const { mode } = useTheme();
   return (
@@ -102,7 +115,7 @@ const Skills = () => {
                 className="app__flex"
                 style={{ backgroundColor: "rgb(237, 242, 248)" }}
               >
-                <img src="/git.png" alt="git " />
+                <img src={skill.imgUrl} alt="git " />
               </div>
               <p className={`p-text ${mode}`}>{skill.name}</p>
             </motion.div>

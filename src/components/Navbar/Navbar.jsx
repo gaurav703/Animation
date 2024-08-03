@@ -19,7 +19,7 @@ const Navbar = () => {
         <h3 className="app__logo">TCHOUANFE</h3>
       </div> */}
       <ul className={`app__navbar-links ${mode}`}>
-        {["home", "about", "work", "skills", "contact"].map((item) => (
+        {["home", "about", "skills", "projects", "contact"].map((item) => (
           <li className={`app__flex  p-text ${mode}`} key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
@@ -47,20 +47,15 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul className={`app__navbar-links ${mode}`}>
-              {[
-                "home",
-                "about",
-                "work",
-                "skills",
-                "Testimonials",
-                "contact",
-              ].map((item) => (
-                <li key={`${item}`}>
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
-                    {item}
-                  </a>
-                </li>
-              ))}
+              {["home", "about", "skills", "projects", "contact"].map(
+                (item) => (
+                  <li key={`${item}`}>
+                    <a href={`#${item}`} onClick={() => setToggle(false)}>
+                      {item}
+                    </a>
+                  </li>
+                )
+              )}
               {/* <li>
                 <span className="mode-toggle">
                   <img

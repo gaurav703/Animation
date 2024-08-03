@@ -9,7 +9,7 @@ const AppWrap = (Component, idName, className) =>
 
     return (
       <div id={idName} className={`app__container ${mode}  ${className}`}>
-        {/* <SocialMedia/> */}
+        {/* <SocialMedia /> */}
         <div className="app__wrapper app__flex">
           <Component />
           {/* <div className='copyright'>

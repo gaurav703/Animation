@@ -175,3 +175,23 @@
     display: none;
   }
 }
+
+.app_cont{
+  padding: 0 10rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .app_cont{
+    padding: 0 5rem;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .app_cont{
+    padding: 0 1rem;
+  }
+
+
+  
+}
