@@ -9,28 +9,9 @@ const Footer = () => {
   const form = useRef();
   const [isFormSubmited, setIsFormSubmited] = useState(false);
   const [loading, setLoading] = useState(false);
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     setLoading(true);
-    // emailjs
-    //   .sendForm(
-    //     "service_hqyc2tq",
-    //     "template_ipohpa9",
-    //     form.current,
-    //     "c3SwW6XwBvPURNXNt"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       setLoading(false);
-    //       setIsFormSubmited(true);
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       setLoading(false);
-    //       console.log(error.text);
-    //     }
-    //   );
-    // e.target.reset();
   };
   // const [formData, setFormData] = useState({
   //   name: "",
